@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-container":"#fdbacc","surface-variant":"#e3e2e2","on-primary-fixed":"#3f0016","surface-bright":"#faf9f9","on-primary-container":"#fff9f9","on-secondary-fixed-variant":"#683848","error-container":"#ffdad6","primary":"#963c53","tertiary-fixed-dim":"#f5bd58","background":"#faf9f9","outline-variant":"#dac0c4","surface-container":"#efeded","tertiary-container":"#986b02","status-completed":"#22A06B","on-error":"#ffffff","surface-container-highest":"#e3e2e2","inverse-surface":"#303031","surface-container-low":"#f5f3f3","on-primary-fixed-variant":"#7d283f","secondary-fixed-dim":"#f7b4c7","outline-subtle":"#F5E8EB","primary-container":"#b5546b","outline":"#877275","status-overdue":"#E5484D","on-secondary-fixed":"#340d1c","soft-rose":"#FBF3F4","on-tertiary-container":"#fff9f6","on-surface":"#1b1c1c","surface":"#faf9f9","inverse-on-surface":"#f2f0f0","surface-tint":"#9b4056","tertiary-fixed":"#ffdeaa","on-surface-variant":"#544245","on-background":"#1b1c1c","surface-container-lowest":"#ffffff","primary-fixed":"#ffd9df","outline-rose":"#EED9DF","status-in-progress":"#F5A524","secondary-fixed":"#ffd9e2","on-error-container":"#93000a","tertiary":"#795400","on-tertiary":"#ffffff","surface-dim":"#dbdad9","inverse-primary":"#ffb1c0","on-secondary":"#ffffff","primary-fixed-dim":"#ffb1c0","on-secondary-container":"#7a4757","on-tertiary-fixed-variant":"#5f4100","surface-white":"#FFFFFF","on-tertiary-fixed":"#271900","surface-container-high":"#e9e8e8","on-primary":"#ffffff","error":"#ba1a1a","secondary":"#834f5f"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-xl":"2rem","gutter-desktop":"1.5rem","space-md":"1rem","margin-desktop":"2rem","gutter":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"section-title-lg":["Plus Jakarta Sans"],"page-title-mobile":["Plus Jakarta Sans"],"body-base":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"page-title-lg":["Plus Jakarta Sans"],"body-medium":["Plus Jakarta Sans"],"page-title":["Plus Jakarta Sans"],"section-title":["Plus Jakarta Sans"]},"fontSize":{"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"400"}],"section-title-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"page-title-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-base":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"page-title-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-medium":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"page-title":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"section-title":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}]}}}}</script></head><body class="bg-soft-rose font-body-base text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-on-primary-fixed text-surface-white z-20 flex flex-col justify-between shadow-[0_1px_8px_rgba(74,31,46,0.06)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-white text-[20px]">school</span></div><span class="font-section-title-lg text-section-title-lg text-surface-white tracking-tight">CampusFlow</span></div></div><div class="px-space-md py-space-xs"><div class="p-space-sm rounded-xl bg-on-secondary-fixed/50 flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-surface-white text-label-md font-label-md">R</div><div class="flex flex-col min-w-0 flex-1"><span class="font-body-medium text-body-medium text-surface-white truncate">Rimawati</span><span class="font-label-sm text-label-sm text-outline-rose truncate">NIM 240511184 / Admin</span></div></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-surface-white font-body-medium"><div class="px-space-sm pt-space-xs pb-space-xs font-label-sm text-label-sm text-outline-rose/80 uppercase tracking-wider">Portal Mahasiswa</div><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="dashboard-mahasiswa" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="mata-kuliah-saya" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Mata Kuliah Saya</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="materi-kuliah" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Materi</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="tugas-dan-submission" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Tugas &amp; Submission</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="jadwal-dan-kalender" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>Jadwal &amp; Kalender</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="nilai-akademik" href="#"><span class="material-symbols-outlined text-[20px]">grade</span><span>Nilai</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="riwayat-akademik" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Riwayat Akademik</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="study-planner" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span>Study Planner</span></a><div class="my-space-xs h-[1px] bg-on-secondary-fixed-variant/40 mx-space-sm"></div><div class="px-space-sm pt-space-xs pb-space-xs font-label-sm text-label-sm text-outline-rose/80 uppercase tracking-wider">Administrasi</div><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="dashboard-admin" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span>Dashboard Admin</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="manajemen-pengguna" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Manajemen Pengguna</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="manajemen-mahasiswa" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Manajemen Mahasiswa</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="manajemen-dosen" href="#"><span class="material-symbols-outlined text-[20px]">supervisor_account</span><span>Manajemen Dosen</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="manajemen-semester-dan-kurikulum" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span>Semester &amp; Kurikulum</span></a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-xl text-outline-rose hover:bg-on-secondary-fixed hover:text-surface-white transition-colors font-body-sm text-body-sm" data-path="data-akademik" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Data Akademik</span></a></nav></div></div><div class="p-space-sm"><div class="pt-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-surface-white font-body-medium"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 rounded-xl transition-colors bg-primary-container text-surface-white font-body-medium" data-path="arsip-dokumen" href="#"><span class="material-symbols-outlined text-[20px]">folder_zip</span><span>Arsip Dokumen</span></a></nav></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-white/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,31,46,0.04)] z-10 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">home</span><span>/</span><span class="text-on-surface font-body-medium">Portal Akademik</span></div><div class="relative hidden md:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md bg-soft-rose rounded-xl text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" placeholder="Cari mata kuliah, berkas, atau pengumuman..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-soft-rose hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-soft-rose hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 px-space-margin-desktop py-space-xl bg-soft-rose"><div class="flex flex-col w-full">
+<!-- Page Context & Identity Bar (Editorial Scholarly Style) -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="tracking-wider uppercase">Repositori Dokumen Terotentikasi</span>
+</div>
+<h1 class="font-page-title text-page-title text-on-surface tracking-tight">Arsip Dokumen Akademik</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl leading-relaxed">
+          Repositori penyimpanan berkas resmi akademik mahasiswa: KRS, KHS, transkrip, surat keterangan aktif, dan sertifikat ber-barcode validasi PDDIKTI/BAAK.
+        </p>
+</div>
+<!-- Student Metadata Pill Card -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-white rounded-xl shadow-sm self-start lg:self-center">
+<div class="w-11 h-11 rounded-lg bg-soft-rose flex items-center justify-center text-primary font-section-title text-section-title">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<div class="flex flex-col pr-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-medium text-body-medium text-on-surface">Rimawati</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-fixed text-label-sm font-label-md">S1 TI</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>NIM: 240511184</span>
+<span>•</span>
+<span class="text-primary font-body-medium">Smt. Ganjil 2026/2027</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Capacity & Integrity KPI Deck -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total Dokumen -->
+<div class="p-space-md bg-surface-white rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Dokumen Tersimpan</span>
+<div class="w-8 h-8 rounded-lg bg-soft-rose flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">folder_special</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-page-title-lg text-page-title-lg text-on-surface">18</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Berkas Resmi</span>
+</div>
+<span class="mt-space-xs font-label-sm text-label-sm text-status-completed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Terkatalog otomatis
+        </span>
+</div>
+<!-- Kategori Terarsip -->
+<div class="p-space-md bg-surface-white rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kategori Terdaftar</span>
+<div class="w-8 h-8 rounded-lg bg-soft-rose flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">category</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-page-title-lg text-page-title-lg text-on-surface">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Klasifikasi</span>
+</div>
+<span class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant">KRS, KHS, Transkrip, Surat, Prestasi</span>
+</div>
+<!-- Validasi Digital TTE -->
+<div class="p-space-md bg-surface-white rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Integritas TTE</span>
+<div class="w-8 h-8 rounded-lg bg-soft-rose flex items-center justify-center text-status-completed">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-page-title-lg text-page-title-lg text-status-completed">100%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Valid</span>
+</div>
+<span class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant">Tersertifikasi Balai Sertifikasi BSrE</span>
+</div>
+<!-- Kapasitas Cloud Kampus -->
+<div class="p-space-md bg-surface-white rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Cloud Vault</span>
+<span class="font-label-sm text-label-sm font-label-md text-primary">24.5 / 100 MB</span>
+</div>
+<div class="mt-space-sm">
+<div class="w-full bg-soft-rose rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 24.5%;"></div>
+</div>
+</div>
+<span class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>75.5 MB sisa kuota</span>
+<span class="text-primary font-body-medium">Tersinkron</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout (70% Documents Area, 30% Official Services & Verification Sidebar) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Primary Content Column (8/12 Desktop) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter Toolbar & Category Navigation -->
+<div class="bg-surface-white p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<!-- Search and Primary Action Row -->
+<div class="flex flex-col sm:flex-row gap-space-sm items-stretch sm:items-center justify-between">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-space-md bg-soft-rose rounded-xl text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="docSearch" placeholder="Cari nama dokumen, nomor registrasi, atau tahun akademik..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<select class="h-10 px-3 bg-soft-rose text-on-surface font-body-sm text-body-sm rounded-xl focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer" id="semesterFilter">
+<option value="all">Semua Semester</option>
+<option value="smt5">Semester 5 (Ganjil 26/27)</option>
+<option value="smt4">Semester 4 (Genap 25/26)</option>
+<option value="smt3">Semester 3 (Ganjil 25/26)</option>
+<option value="smt2">Semester 2 (Genap 24/25)</option>
+<option value="smt1">Semester 1 (Ganjil 24/25)</option>
+</select>
+<button class="h-10 px-space-md rounded-xl bg-primary-container hover:bg-primary text-surface-white font-body-medium text-body-medium flex items-center gap-1.5 transition-colors shadow-sm whitespace-nowrap" onclick="openUploadModal()">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="hidden sm:inline">Unggah Mandiri</span>
+<span class="sm:hidden">Unggah</span>
+</button>
+</div>
+</div>
+<!-- Filter Category Tabs / Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 pt-1 text-label-md font-label-md">
+<button class="category-pill px-3 py-1.5 rounded-full bg-primary text-on-primary transition-colors whitespace-nowrap" onclick="filterCategory('all', this)">
+            Semua Dokumen (18)
+          </button>
+<button class="category-pill px-3 py-1.5 rounded-full bg-soft-rose text-on-surface-variant hover:text-primary hover:bg-secondary-fixed/50 transition-colors whitespace-nowrap" onclick="filterCategory('krs', this)">
+            KRS (5)
+          </button>
+<button class="category-pill px-3 py-1.5 rounded-full bg-soft-rose text-on-surface-variant hover:text-primary hover:bg-secondary-fixed/50 transition-colors whitespace-nowrap" onclick="filterCategory('khs', this)">
+            KHS (4)
+          </button>
+<button class="category-pill px-3 py-1.5 rounded-full bg-soft-rose text-on-surface-variant hover:text-primary hover:bg-secondary-fixed/50 transition-colors whitespace-nowrap" onclick="filterCategory('transkrip', this)">
+            Transkrip Nilai (2)
+          </button>
+<button class="category-pill px-3 py-1.5 rounded-full bg-soft-rose text-on-surface-variant hover:text-primary hover:bg-secondary-fixed/50 transition-colors whitespace-nowrap" onclick="filterCategory('sertifikat', this)">
+            Sertifikat &amp; Prestasi (5)
+          </button>
+<button class="category-pill px-3 py-1.5 rounded-full bg-soft-rose text-on-surface-variant hover:text-primary hover:bg-secondary-fixed/50 transition-colors whitespace-nowrap" onclick="filterCategory('surat', this)">
+            Surat Resmi Kampus (2)
+          </button>
+</div>
+</div>
+<!-- Document List Container -->
+<div class="flex flex-col gap-space-sm" id="documentListContainer">
+<!-- Document Card 1: KRS Smt 5 -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="krs" data-name="krs semester ganjil 2026/2027 semester 5">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface hover:text-primary cursor-pointer transition-colors">
+                    KRS Semester Ganjil 2026/2027 (Semester 5)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    TTE Valid • Disetujui PA
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Kelas TI24D</span>
+<span>•</span>
+<span>Beban 22 SKS</span>
+<span>•</span>
+<span>Dosen PA: Dr. Hendra Setiawan, M.T.</span>
+<span>•</span>
+<span>Rilis: 01 Sep 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.2 MB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<div class="flex items-center gap-1.5 text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>Doc-ID: CF-2026-KRS5-240511184</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('KRS Semester Ganjil 2026/2027')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('KRS_Smt5_240511184.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="p-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary transition-colors" onclick="copyDocLink('https://campusflow.ac.id/verify/krs-5-240511184')" title="Salin Tautan TTE Resmi">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Card 2: KHS Smt 4 -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="khs" data-name="khs semester genap 2025/2026 semester 4">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface hover:text-primary cursor-pointer transition-colors">
+                    KHS Semester Genap 2025/2026 (Semester 4)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    Terlegalisir Dekanat
+                  </span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-md bg-secondary-fixed/60 text-on-secondary-fixed">
+                    IPS 3.80
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>24 SKS Selesai</span>
+<span>•</span>
+<span>Dekan FTIK: Prof. Dr. Ir. S. Suryanto</span>
+<span>•</span>
+<span>Rilis: 25 Juli 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.4 MB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<div class="flex items-center gap-1.5 text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-status-completed">lock</span>
+<span>Checksum SHA-256: 4e82b7...910a</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('KHS Semester Genap 2025/2026')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('KHS_Smt4_240511184.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+<button class="p-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary transition-colors" onclick="copyDocLink('https://campusflow.ac.id/verify/khs-4-240511184')" title="Salin Tautan TTE Resmi">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Card 3: Transkrip Nilai Kumulatif -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="transkrip" data-name="transkrip nilai sementara kumulatif semester 1-4">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-surface-white flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">history_edu</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface hover:text-primary cursor-pointer transition-colors">
+                    Transkrip Nilai Sementara Kumulatif (Semester 1–4)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    Resmi BAAK
+                  </span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-md bg-tertiary-fixed text-on-tertiary-fixed">
+                    IPK 3.82 • 88 SKS
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Keperluan: Evaluasi Tahap Sarjana Muda &amp; Beasiswa</span>
+<span>•</span>
+<span>Rilis: 10 Agustus 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.1 MB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<div class="flex items-center gap-1.5 text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span>Tanda Tangan Digital BAAK Nasional</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('Transkrip Kumulatif Smt 1-4')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-surface-white font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('Transkrip_Sementara_Rimawati.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh PDF
+              </button>
+<button class="p-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary transition-colors" onclick="copyDocLink('https://campusflow.ac.id/verify/transkrip-rimawati-240511184')">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Card 4: KHS Smt 3 -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="khs" data-name="khs semester ganjil 2025/2026 semester 3">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface">
+                    KHS Semester Ganjil 2025/2026 (Semester 3)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    Terlegalisir
+                  </span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-md bg-secondary-fixed/60 text-on-secondary-fixed">
+                    IPS 3.90
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>23 SKS Lulus</span>
+<span>•</span>
+<span>Rilis: 18 Jan 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.3 MB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arsip Semester 3 Selesai</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('KHS Semester Ganjil 2025/2026')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('KHS_Smt3_240511184.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+</div>
+</div>
+</div>
+<!-- Document Card 5: Sertifikat Kompetensi PSM I -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="sertifikat" data-name="sertifikat kompetensi professional scrum master psm i scrum.org">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface">
+                    Sertifikat Kompetensi: Certified Professional Scrum Master (PSM I)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    Terverifikasi Prodi
+                  </span>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-md bg-secondary-fixed/60 text-on-secondary-fixed">
+                    SKPI Rekognisi
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Lembaga: Scrum.org (Global)</span>
+<span>•</span>
+<span>Kategori: Sertifikasi Profesi TI</span>
+<span>•</span>
+<span>Rilis: 12 Mei 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">850 KB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Credly ID: #8839120-PSM1</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('Sertifikat PSM I Scrum.org')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('Sertifikat_PSM1_Rimawati.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+</div>
+</div>
+</div>
+<!-- Document Card 6: SKMA (Surat Keterangan Mahasiswa Aktif) -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="surat" data-name="surat keterangan mahasiswa aktif kuliah skma dekanat">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">mark_email_read</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface">
+                    Surat Keterangan Mahasiswa Aktif Kuliah (SKMA)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    TTE Dekan Berlaku
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Nomor: 421/FTIK/SKMA/IX/2026</span>
+<span>•</span>
+<span>Keperluan: Pengajuan Beasiswa Riset Unggulan</span>
+<span>•</span>
+<span>Rilis: 04 Sep 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">640 KB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-label-sm text-label-sm text-status-completed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event_available</span> Berlaku s.d. 28 Feb 2027
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('Surat Keterangan Mahasiswa Aktif')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('SKMA_Rimawati_2026.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+</div>
+</div>
+</div>
+<!-- Document Card 7: Sertifikat TOEFL -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="sertifikat" data-name="sertifikat toefl itp official skor 540 pusat bahasa">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">translate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface">
+                    Sertifikat TOEFL ITP Official - Skor 540
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-status-completed/10 text-status-completed">
+                    Syarat Kelulusan Terpenuhi
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Penerbit: Language Center CampusFlow</span>
+<span>•</span>
+<span>Standar Minimal Prodi: 475</span>
+<span>•</span>
+<span>Ujian: 14 Maret 2026</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">920 KB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">No. Seri Tes: LC-2026-ITP-0941</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('Sertifikat TOEFL ITP 540')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('TOEFL_Rimawati_540.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+</div>
+</div>
+</div>
+<!-- Document Card 8: KRS Smt 2 -->
+<div class="doc-card bg-surface-white p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-space-sm" data-category="krs" data-name="krs semester genap 2024/2025 semester 2">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-soft-rose flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center flex-wrap gap-2">
+<h3 class="font-body-medium text-body-medium text-on-surface">
+                    KRS Semester Genap 2024/2025 (Semester 2)
+                  </h3>
+<span class="px-2.5 py-0.5 rounded-full text-label-sm font-label-md bg-surface-variant text-on-surface-variant">
+                    Terarsip
+                  </span>
+</div>
+<div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Beban 21 SKS</span>
+<span>•</span>
+<span>Dosen PA: Dr. Hendra Setiawan, M.T.</span>
+<span>•</span>
+<span>Rilis: 03 Feb 2025</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.1 MB PDF</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Siklus KRS Selesai</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="previewDoc('KRS Semester Genap 2024/2025')">
+<span class="material-symbols-outlined text-[16px]">visibility</span> Pratinjau
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-soft-rose hover:bg-secondary-fixed/50 text-on-surface-variant hover:text-primary font-body-medium text-body-sm transition-colors flex items-center gap-1" onclick="downloadDoc('KRS_Smt2_240511184.pdf')">
+<span class="material-symbols-outlined text-[16px]">download</span> Unduh
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty state container for search fallback -->
+<div class="hidden bg-surface-white p-space-xl rounded-xl shadow-sm text-center flex flex-col items-center justify-center" id="noResultsState">
+<span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+<h4 class="font-section-title text-section-title text-on-surface mt-2">Dokumen tidak ditemukan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">Coba gunakan kata kunci lain seperti nama semester, transkrip, atau nomor registrasi berkas.</p>
+</div>
+</div>
+<!-- Supplementary Side Column: Verification Engine & Official Campus Guide (4/12 Desktop) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Card: Verifikasi Keaslian Dokumen (TTE & Barcode) -->
+<div class="bg-surface-white p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-soft-rose flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+</div>
+<h2 class="font-section-title text-section-title text-on-surface">Verifikasi Dokumen TTE</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Seluruh berkas KRS, KHS, dan Transkrip dilengkapi tanda tangan elektronik resmi (TTE) dan QR-Code yang terenkripsi langsung ke pangkalan data PDDIKTI &amp; BAAK.
+        </p>
+<!-- Fast Barcode Verification Form -->
+<div class="mt-space-xs bg-soft-rose p-space-sm rounded-xl flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm font-label-md text-on-surface" for="docCodeInput">Cek Kode QR / Nomor Registrasi</label>
+<div class="flex gap-2">
+<input class="w-full h-9 px-3 bg-surface-white rounded-lg text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" id="docCodeInput" placeholder="Contoh: CF-2026-KRS5-..." type="text"/>
+<button class="px-3 h-9 bg-primary-container hover:bg-primary text-surface-white rounded-lg font-body-medium text-body-sm flex items-center justify-center transition-colors shrink-0" onclick="verifyCode()">
+              Validasi
+            </button>
+</div>
+<div class="hidden mt-1 text-label-sm font-label-md p-2 rounded-lg" id="verifyFeedback"></div>
+</div>
+<!-- Security Trust Indicators -->
+<div class="mt-space-xs flex flex-col gap-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-completed text-[18px] shrink-0 mt-0.5">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Timestamped Authority</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dokumen terbitan terlindungi anti-manipulasi format PDF/A.</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-completed text-[18px] shrink-0 mt-0.5">gavel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Legalitas UU ITE Pasal 11</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Diakui sah setara tanda tangan basah untuk keperluan institusional.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Panduan Permohonan Legalisir Fisik -->
+<div class="bg-surface-white p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-soft-rose flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<h2 class="font-section-title text-section-title text-on-surface">Panduan Legalisir Fisik</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Bagi mahasiswa yang memerlukan cap basah dan stempel timbul dekanat untuk keperluan instansi eksternal khusus (kedutaan/studi lanjut luar negeri):
+        </p>
+<!-- Steps Timeline Minimal -->
+<div class="flex flex-col gap-space-sm pl-2">
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-soft-rose text-primary font-label-md text-label-md flex items-center justify-center shrink-0 mt-0.5">1</div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-on-surface">Cetak Berkas PDF Resmi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gunakan kertas HVS A4 80 gram dengan orientasi portrait ber-resolusi tinggi.</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-soft-rose text-primary font-label-md text-label-md flex items-center justify-center shrink-0 mt-0.5">2</div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-on-surface">Kunjungi Loket BAAK</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedung Rektorat Lt. 1, Ruang Mahdor A (Senin–Jumat, 08.30–15.00 WIB).</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-soft-rose text-primary font-label-md text-label-md flex items-center justify-center shrink-0 mt-0.5">3</div>
+<div class="flex flex-col">
+<span class="font-body-medium text-body-medium text-on-surface">Tunjukkan KTM Mahasiswa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Petugas memindai QR code berkas dan langsung membubuhkan stempel resmi basah.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-xs p-3 rounded-lg bg-soft-rose flex items-center justify-between text-label-sm font-label-md text-primary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+            Pusat Bantuan BAAK Online
+          </span>
+<a class="underline hover:text-on-primary-fixed" href="#">Hubungi</a>
+</div>
+</div>
+<!-- Card: Catatan Kebijakan Arsip & Periode Dokumen -->
+<div class="p-space-md rounded-xl bg-secondary-container/40 text-on-secondary-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">info</span>
+<span class="font-body-medium text-body-medium text-on-surface">Informasi Pembaruan Berkas</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+          KRS Semester Ganjil 2026/2027 dikunci otomatis pasca masa revisi KRS (Minggu ke-2 perkuliahan). Pengajuan koreksi nilai KHS dapat dilakukan maksimal 14 hari kerja setelah tanggal rilis resmi.
+        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Preview Dokumen -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-md" id="previewModal">
+<div class="bg-surface-white w-full max-w-2xl rounded-xl shadow-xl flex flex-col overflow-hidden">
+<!-- Modal Header -->
+<div class="p-space-md bg-soft-rose flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-white flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div>
+<h3 class="font-body-medium text-body-medium text-on-surface" id="modalDocTitle">Pratinjau Dokumen</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pratinjau terotentikasi digital kampus</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-secondary-fixed/50 hover:text-on-surface transition-colors" onclick="closePreviewModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Simulated Document Sheet) -->
+<div class="p-space-lg flex flex-col items-center justify-center bg-soft-rose/30 min-h-[360px]">
+<div class="w-full max-w-md bg-surface-white p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md text-on-surface">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-primary-container text-surface-white flex items-center justify-center font-label-md text-label-md">CF</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface leading-none">UNIVERSITAS CAMPUSFLOW</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Fakultas Teknologi Informasi &amp; Komunikasi</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">qr_code_2</span>
+</div>
+<div class="h-[1px] bg-secondary-container/60 w-full"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Subjek Berkas:</span>
+<span class="font-section-title text-section-title text-primary" id="sheetDocName">KRS Semester 5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pemilik: Rimawati • NIM: 240511184 • S1 Teknik Informatika</span>
+</div>
+<div class="p-3 bg-soft-rose rounded-lg flex items-center justify-between text-label-sm text-on-surface-variant">
+<span>Status Verifikasi:</span>
+<span class="font-label-md text-status-completed flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Digital Signature Certified
+            </span>
+</div>
+<div class="text-center font-label-sm text-label-sm text-outline">
+            Dokumen ini di-render secara dinamis dari repositori pusat terenkripsi.
+          </div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-white flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-xl bg-soft-rose text-on-surface hover:bg-secondary-fixed/50 font-body-medium text-body-sm transition-colors" onclick="closePreviewModal()">
+          Tutup
+        </button>
+<button class="px-4 py-2 rounded-xl bg-primary-container hover:bg-primary text-surface-white font-body-medium text-body-sm transition-colors flex items-center gap-1.5" onclick="toastMessage('Dokumen berhasil diunduh ke perangkat Anda.')">
+<span class="material-symbols-outlined text-[18px]">download</span> Unduh PDF Asli
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Unggah Dokumen Mandiri -->
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-space-md" id="uploadModal">
+<div class="bg-surface-white w-full max-w-lg rounded-xl shadow-xl flex flex-col overflow-hidden">
+<!-- Modal Header -->
+<div class="p-space-md bg-soft-rose flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+</div>
+<div>
+<h3 class="font-body-medium text-body-medium text-on-surface">Unggah Dokumen Mandiri</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sertifikat, Lomba, atau Surat Eksternal Mahasiswa</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-secondary-fixed/50 hover:text-on-surface transition-colors" onclick="closeUploadModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Upload Form -->
+<form class="p-space-md flex flex-col gap-space-sm" onsubmit="handleUploadSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Nama Dokumen</label>
+<input class="h-10 px-3 bg-soft-rose rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Contoh: Sertifikat Juara 2 Hackathon Nasional" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Kategori Berkas</label>
+<select class="h-10 px-3 bg-soft-rose rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Sertifikat &amp; Prestasi</option>
+<option>Surat Rekomendasi/Magang</option>
+<option>Lainnya (Portofolio)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Tahun Terbit</label>
+<input class="h-10 px-3 bg-soft-rose rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container" type="number" value="2026"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Pilih File (PDF, Maks 5 MB)</label>
+<div class="p-space-lg rounded-xl bg-soft-rose flex flex-col items-center justify-center text-center cursor-pointer hover:bg-secondary-container/20 transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary">cloud_upload</span>
+<p class="font-body-medium text-body-sm text-on-surface mt-1">Seret &amp; lepas berkas PDF ke sini</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">atau klik untuk menelusuri penyimpanan</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-soft-rose flex items-start gap-2 text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0 mt-0.5">verified</span>
+<span>Dokumen yang diunggah akan masuk status peninjauan Tim BAAK &amp; Prodi sebelum disematkan ke transkrip SKPI.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-xl bg-soft-rose text-on-surface font-body-medium text-body-sm hover:bg-secondary-fixed/50 transition-colors" onclick="closeUploadModal()" type="button">
+            Batal
+          </button>
+<button class="px-4 py-2 rounded-xl bg-primary-container hover:bg-primary text-surface-white font-body-medium text-body-sm transition-colors flex items-center gap-1" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span> Simpan ke Arsip
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toastContainer"></div>
+<!-- Micro-interactions Script -->
+<script>
+    // Search Filter Logic
+    const searchInput = document.getElementById('docSearch');
+    const docCards = document.querySelectorAll('.doc-card');
+    const noResultsState = document.getElementById('noResultsState');
+    let currentCategory = 'all';
+
+    searchInput.addEventListener('input', applyFilters);
+
+    function filterCategory(category, buttonEl) {
+      currentCategory = category;
+      document.querySelectorAll('.category-pill').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-soft-rose', 'text-on-surface-variant');
+      });
+      buttonEl.classList.remove('bg-soft-rose', 'text-on-surface-variant');
+      buttonEl.classList.add('bg-primary', 'text-on-primary');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+
+      docCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const cardName = card.getAttribute('data-name');
+        
+        const matchCategory = (currentCategory === 'all' || cardCategory === currentCategory);
+        const matchQuery = (!query || cardName.includes(query));
+
+        if (matchCategory && matchQuery) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResultsState.classList.remove('hidden');
+      } else {
+        noResultsState.classList.add('hidden');
+      }
+    }
+
+    // Modal Operations
+    function previewDoc(title) {
+      document.getElementById('modalDocTitle').innerText = title;
+      document.getElementById('sheetDocName').innerText = title;
+      document.getElementById('previewModal').classList.remove('hidden');
+    }
+
+    function closePreviewModal() {
+      document.getElementById('previewModal').classList.add('hidden');
+    }
+
+    function openUploadModal() {
+      document.getElementById('uploadModal').classList.remove('hidden');
+    }
+
+    function closeUploadModal() {
+      document.getElementById('uploadModal').classList.add('hidden');
+    }
+
+    function handleUploadSubmit(e) {
+      e.preventDefault();
+      closeUploadModal();
+      toastMessage('Berkas baru berhasil diajukan dan sedang diproses verifikasi.');
+    }
+
+    // Actions
+    function downloadDoc(fileName) {
+      toastMessage(`Mengunduh berkas: ${fileName}`);
+    }
+
+    function copyDocLink(url) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          toastMessage('Tautan verifikasi TTE berhasil disalin ke papan klip.');
+        });
+      } else {
+        toastMessage('Tautan verifikasi TTE disalin: ' + url);
+      }
+    }
+
+    function verifyCode() {
+      const code = document.getElementById('docCodeInput').value.trim();
+      const feedback = document.getElementById('verifyFeedback');
+      feedback.classList.remove('hidden', 'bg-status-completed/10', 'text-status-completed', 'bg-error-container', 'text-error');
+      
+      if (!code) {
+        feedback.innerText = 'Mohon masukkan nomor dokumen terlebih dahulu.';
+        feedback.classList.add('bg-error-container', 'text-error');
+        return;
+      }
+
+      if (code.toUpperCase().includes('CF-') || code.toUpperCase().includes('KRS') || code.toUpperCase().includes('KHS')) {
+        feedback.innerText = `Otentik! Terdaftar di Server KampusFlow BAAK a.n. Rimawati (NIM 240511184). Status: Sah.`;
+        feedback.classList.add('bg-status-completed/10', 'text-status-completed');
+      } else {
+        feedback.innerText = 'Format nomor terdaftar tidak dikenali dalam repositori resmi.';
+        feedback.classList.add('bg-error-container', 'text-error');
+      }
+    }
+
+    function toastMessage(message) {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'px-4 py-3 bg-on-surface text-surface-white rounded-xl shadow-lg font-body-sm text-body-sm flex items-center gap-2 transform translate-y-4 opacity-0 transition-all duration-200 pointer-events-auto';
+      toast.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] text-secondary-fixed">info</span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 250);
+      }, 3200);
+    }
+  </script>
+</div></main></div><script src="../campusflow-app.js"></script></body></html>

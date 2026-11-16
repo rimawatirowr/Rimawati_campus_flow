@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <title>Tugas &amp; Pengumpulan Mahasiswa — CampusFlow Academic Hub</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed-variant": "#683848",
+            "on-primary-fixed-variant": "#7d283f",
+            "on-secondary": "#ffffff",
+            "primary": "#B5546B",
+            "secondary-container": "#fdbacc",
+            "on-secondary-fixed": "#340d1c",
+            "on-tertiary-fixed-variant": "#5f4100",
+            "surface-variant": "#e3e2e2",
+            "tertiary-fixed-dim": "#f5bd58",
+            "surface-bright": "#faf9f9",
+            "on-tertiary-fixed": "#271900",
+            "on-primary-container": "#fff9f9",
+            "surface-container-low": "#f5f3f3",
+            "tertiary": "#D9A441",
+            "surface-dim": "#dbdad9",
+            "status-completed": "#22A06B",
+            "on-surface-variant": "#544245",
+            "outline": "#877275",
+            "outline-rose": "#EED9DF",
+            "on-error": "#ffffff",
+            "inverse-surface": "#303031",
+            "on-primary-fixed": "#4A1F2E",
+            "outline-subtle": "#F5E8EB",
+            "surface-container-lowest": "#ffffff",
+            "surface-white": "#FFFFFF",
+            "on-tertiary-container": "#fff9f6",
+            "error": "#ba1a1a",
+            "tertiary-container": "#986b02",
+            "primary-fixed-dim": "#ffb1c0",
+            "primary-fixed": "#ffd9df",
+            "background": "#FBF3F4",
+            "primary-container": "#B5546B",
+            "tertiary-fixed": "#ffdeaa",
+            "surface-container-highest": "#e3e2e2",
+            "on-secondary-container": "#7a4757",
+            "inverse-on-surface": "#f2f0f0",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#e9e8e8",
+            "on-surface": "#1b1c1c",
+            "error-container": "#ffdad6",
+            "surface-tint": "#9b4056",
+            "secondary-fixed": "#ffd9e2",
+            "status-overdue": "#E5484D",
+            "status-in-progress": "#D9A441",
+            "surface-container": "#efeded",
+            "surface": "#faf9f9",
+            "secondary-fixed-dim": "#f7b4c7",
+            "secondary": "#834f5f",
+            "on-background": "#1b1c1c",
+            "outline-variant": "#dac0c4",
+            "soft-rose": "#FBF3F4",
+            "inverse-primary": "#ffb1c0",
+            "on-tertiary": "#ffffff"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            "body-medium": ["Plus Jakarta Sans"],
+            "body-base": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "section-title-lg": ["Plus Jakarta Sans"],
+            "page-title-lg": ["Plus Jakarta Sans"],
+            "page-title": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "section-title": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "page-title-mobile": ["Plus Jakarta Sans"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-[#FBF3F4] font-sans text-on-surface antialiased min-h-screen overflow-x-hidden">
+  <!-- Left Navigation Sidebar (Consistent with all CampusFlow screens) -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-[#4A1F2E] z-50 flex flex-col justify-between shadow-sm"></aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="pl-64 min-h-screen flex flex-col transition-all duration-200">
+    <!-- Top Header -->
+    <header class="fixed top-0 left-64 right-0 h-16 bg-surface-white/95 backdrop-blur-xl z-40 flex items-center justify-between px-4 sm:px-6 border-b border-outline-rose/60 transition-all duration-200">
+      <div class="flex items-center gap-2 min-w-0">
+        <nav class="flex items-center gap-1.5 text-xs sm:text-sm text-on-surface-variant truncate">
+          <a href="../dashboard_mahasiswa/code.html" class="hover:text-primary transition-colors">Beranda</a>
+          <span class="material-symbols-outlined text-sm text-outline-variant">chevron_right</span>
+          <a href="../mata_kuliah_saya_mahasiswa/code.html" class="hover:text-primary transition-colors hidden sm:inline">Mata Kuliah Saya</a>
+          <span class="material-symbols-outlined text-sm text-outline-variant hidden sm:inline">chevron_right</span>
+          <span class="text-primary font-semibold truncate">Tugas &amp; Pengumpulan</span>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button type="button" class="hidden md:flex items-center justify-between w-56 px-3 py-1.5 bg-surface-container-low rounded-xl text-on-surface-variant hover:text-on-surface text-xs transition-all">
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-outline">search</span><span>Cari tugas / mata kuliah...</span></span>
+          <kbd class="px-1.5 py-0.5 rounded bg-surface-white text-[10px] border border-outline-rose font-semibold">Ctrl+K</kbd>
+        </button>
+        <button type="button" class="relative w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Notifikasi">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+          <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span>
+        </button>
+        <div class="flex items-center gap-2.5 pl-2 border-l border-outline-rose">
+          <div class="w-8 h-8 rounded-full bg-[#B5546B] text-white flex items-center justify-center text-xs font-bold">RI</div>
+          <div class="hidden sm:flex flex-col text-left">
+            <span class="text-xs font-bold text-on-surface leading-tight">Rimawati</span>
+            <span class="text-[11px] text-on-surface-variant leading-tight">NIM: 240511184 • Kelas TI24D</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content (Rendered dynamically by syncTugasMahasiswaPage in campusflow-app.js) -->
+    <main class="flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-[1380px] w-full mx-auto">
+      <div id="cf-student-tasks-root" class="space-y-6"></div>
+    </main>
+  </div>
+
+  <script src="../campusflow-app.js"></script>
+</body>
+
+</html>
